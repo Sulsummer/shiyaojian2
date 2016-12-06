@@ -15,12 +15,113 @@ $(document).ready(function() {
       page5: {}
     },
     set1: function() {
+      var $$cache = this.cache.page1,
+          $page   = $$cache.$page,
+          $female = $$cache.$female,
+          $text   = $$cache.$text;
+
+      if (!$page) $page = $$cache.$page = $('#page1');
+      if (!$female) $female = $$cache.$female = $page.find('.female');
+      if (!$text) $text = $$cache.$text = $page.find('.text');
+      /**
+       * handle those only once:
+       * 1.clouds
+       * 2.female
+       */
+      if (!$$cache.once) {
+        (function() {
+          $page.find('.clouds').each(function() {
+            $(this).height($(this).width()*9/16);
+          });
+
+          $female.width($female.height()/2.7);
+
+          $$cache.once = true;
+        }.bind(this))();
+      }
+
+      /**
+       * animate: 1.female
+       *          2.text = text1 + text2
+       */
+      (function() {
+        $female.addClass('female-go-in');
+
+        $text.each(function() {
+          $(this).addClass('text-go-in');
+        });
+
+        setTimeout(function() {
+          $page.find('.text2').addClass('text-go-large');
+        }, 1000);
+      })();
+
+
+
+    },
+    set2: function() {
+      var $$cache = this.cache.page2,
+          $page   = $$cache.$page,
+          $female = $$cache.$female,
+          $text   = $$cache.$text,
+          $icons  = $$cache.$icons,
+          $cloud  = $$cache.$cloud;
+
+      if (!$page) $page = $$cache.$page = $('#page2');
+      if (!$female) $female = $$cache.$female = $page.find('.female');
+      if (!$text) $text = $$cache.$text = $page.find('.text');
+      if (!$icons) $icons = $$cache.$icons = $page.find('.icon');
+      if (!$cloud) $cloud = $$cache.$cloud = $page.find('.cloud');
+      /**
+       * handle those only once:
+       * 1.icons
+       * 2.female
+       * 3.text
+       */
+      if (!$$cache.once) {
+        (function() {
+          var height = $icons.eq(0).width();
+          $icons.each(function() {
+            $(this).height(height);
+          });
+
+          var width = $female.height()/2.5;
+          $female.width(width);
+          var rightString = $female.css('right'),
+              right = parseInt(rightString.slice(0, rightString.indexOf('px')));
+          $text.width($page.width() - width - 10 - right);
+
+          $$cache.once = true;
+        }.bind(this))();
+      }
+      /**
+       * animate: 1.cloud
+       *          2.icons in order
+       *          3.female
+       *          4.text
+       */
+      (function() {
+        $cloud.addClass('animated bounceInDown');
+        $female.addClass('animated slideInUp');
+        $text.addClass('animated slideInUp');
+        var i = 0, len = $icons.length;
+        var interval = setInterval(function() {
+          var $icon = $icons.eq(i);
+          $icon.css('opacity', '1');
+          $icon.offset();
+          $icon.addClass('animated bounceInDown');
+          i ++;
+          if (i === len) clearInterval(interval);
+        }, 500);
+      })();
+    },
+    set3: function() {
+      var $$cache     = this.cache.page3;
       /**
        * canvas for lights
        */
-      (function() {
-        var $$cache     = this.cache.page1,
-            canvas      = $$cache.canvas || d.getElementById('light'),
+      (function($$cache) {
+        var canvas      = $$cache.canvas || d.getElementById('light'),
             ctx         = $$cache.ctx || canvas.getContext('2d'),
             canHeight   = $$cache.canHeight || $$height*(3/5) ,
             canWidth    = $$cache.canWidth  || $$width,
@@ -120,7 +221,7 @@ $(document).ready(function() {
             break;
             default: return;
           }
-          this.font = '100px Consolas';
+          this.font = '2rem Consolas';
           this.textBaseline = 'middle';
           this.fillStyle = '#000';
           this.fillText(text, x, y);
@@ -144,21 +245,7 @@ $(document).ready(function() {
           if (!$$cache.x) $$cache.x = x;
         }.bind(this))();
 
-      }.bind(this))();
-
-      /**
-       * handle clouds
-       */
-      (function() {
-        
-      }.bind(this))();
-
-    },
-    set2: function() {
-      console.log('set2')
-    },
-    set3: function() {
-      console.log('set3')
+      }.bind(this))($$cache);
     },
     set4: function() {
       console.log('set4')
@@ -167,19 +254,41 @@ $(document).ready(function() {
       console.log('set5')
     },
     clear1: function() {
-      var $$cache = this.cache.page1;
+      var $$cache = this.cache.page1,
+          $page = $$cache.$page,
+          $female = $$cache.$female,
+          $text = $$cache.$text;
+      /**
+       * clear female and text move
+       */
+      setTimeout(function() {
+        $female.removeClass('female-go-in');
+        $text.each(function() {
+          $(this).removeClass('text-go-in');
+          $(this).removeClass('text-go-large');
+        });
+      }, 100);
+    },
+    clear2: function() {
+      var $$cache = this.cache.page2,
+          $page   = $$cache.$page,
+          $female = $$cache.$female,
+          $text   = $$cache.$text,
+          $icons  = $$cache.$icons,
+          $cloud  = $$cache.$cloud;
+
+      /**
+       * clear female and icons and cloud
+       */
+    },
+    clear3: function() {
+      var $$cache = this.cache.page3;
       /**
        * clear canvas
        */
       (function() {
         if ($$cache.ctx && $$cache.canWidth && $$cache.canHeight) $$cache.ctx.clearRect(0, 0, $$cache.canWidth, $$cache.canHeight);
       })();
-    },
-    clear2: function() {
-      console.log('clear2')
-    },
-    clear3: function() {
-      console.log('clear3')
     },
     clear4: function() {
       console.log('clear4')
@@ -191,6 +300,8 @@ $(document).ready(function() {
 
   var swiper   = new Swiper('.container', {
     direction: 'vertical',
+    scrollbarDraggable: false,
+    mousewheelControl: true,
     onInit: function() {
       $loading.fadeOut();
       $('.page').each(function() {

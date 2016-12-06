@@ -5,7 +5,11 @@
 html, body {
   width: 100%;
   height: 100%;
-  font-size: 20px;
+  font-size: 3vh;
+}
+$blue: #707cf8;
+strong.blue {
+  color: $blue;
 }
 
 #light {
@@ -19,14 +23,136 @@ html, body {
     width: 100%;
     height: 100%;
     position: relative;
+    background-size: 100% 100% !important;
   }
 }
 
 
 #page1 {
-  background: #ccc;
+  background: url('../img/bg1.png');
+  .clouds {
+    position: absolute;
+    background-size: 100% 100% !important;
+  }
+  .cloud1 {
+    background: url('../img/p1cloud1.png');
+    width: 35%;
+    animation: p1cloud1 8s ease-out infinite alternate;
+  }
+  .cloud2 {
+    background: url('../img/p1cloud2.png');
+    width: 10%;
+    animation: p1cloud2 10s linear infinite alternate;
+  }
+  .cloud3 {
+    background: url('../img/p1cloud3.png');
+    width: 15%;
+    animation: p1cloud3 6s linear infinite;
+  }
+  .cloud4 {
+    background: url('../img/p1cloud2.png');
+    opacity: 0.6;
+    width: 10%;
+    top: 5%;
+    right: 5%;
+  }
+
+  .female {
+    background: url('../img/female.png');
+    background-size: 100% 100%;
+    height: 45%;
+    position: absolute;
+    bottom: 2%;
+  }
+  .female-go-in {
+    animation: p1femaleGoIn 1s ease-out forwards;
+  }
+
+  .text {
+    position: absolute;
+    background-size: 100% 100% !important;
+    box-sizing: content-box;
+    line-height: 1.5rem;
+  }
+  .text1 {
+    width: 60%;
+    height: 20%;
+    bottom: 50%;
+    padding: 3% 5% 10% 10%;
+    background: url('../img/dialog-top.png');
+  }
+  .text2 {
+    width: 45%;
+    height: 15%;
+    top: 50%;
+    padding: 10% 5% 18% 10%;
+    background: url('../img/dialog-bottom.png');
+  }
+  .text-go-in {
+    animation: p1textGoIn 1s ease-out forwards;
+  }
+  .text-go-large {
+    animation: p1strongGoLarge 1s ease-out forwards;
+  }
 }
 
 #page2 {
-  background: #ddd;
+  background: url('../img/bg2.png');
+  .cloud {
+    background: url('../img/cloud.png');
+    background-size: 100% 100%;
+    width: 100%;
+    height: 25%;
+  }
+  .female {
+    background: url('../img/female2.png');
+    background-size: 100% 100%;
+    height: 45%;
+    position: absolute;
+    bottom: 2%;
+    right: 15%;
+  }
+  .icon {
+    width: 16%;
+    border-radius: 50%;
+    position: absolute;
+    background-size: contain !important;
+    opacity: 0;
+  }
+  .icon1 {
+    top: 35%;
+    left: 5%;
+    background: url('../img/food.png');
+  }
+  .icon2 {
+    top: 28%;
+    left: 23%;
+    background: url('../img/medicine.png');
+  }
+  .icon3 {
+    top: 25%;
+    left: 42%;
+    background: url('../img/health.png');
+  }
+  .icon4 {
+    top: 28%;
+    right: 23%;
+    background: url('../img/makeup.png');
+  }
+  .icon5 {
+    top: 35%;
+    right: 5%;
+    background: url('../img/device.png');
+  }
+  .text {
+    background: url('../img/dialog-blank.png');
+    background-size: 100% 100%;
+    padding: 35px 15px 40px 15px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+  }
+
 }
