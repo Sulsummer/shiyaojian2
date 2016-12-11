@@ -5,7 +5,10 @@
 html, body {
   width: 100%;
   height: 100%;
-  font-size: 3vh;
+  font-size: 2.5vh;
+  color: #434343;
+  transform: none;
+  font-family:'minijianshaoer793432a6a1618a';
 }
 $blue: #707cf8;
 strong.blue {
@@ -16,6 +19,10 @@ strong.blue {
   position: absolute;
   margin-top: 25%;
 }
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
 .container {
   width: 100%;
   height: 100%;
@@ -24,6 +31,7 @@ strong.blue {
     height: 100%;
     position: relative;
     background-size: 100% 100% !important;
+    overflow: hidden;
   }
 }
 
@@ -47,6 +55,7 @@ strong.blue {
   .cloud3 {
     background: url('../img/p1cloud3.png');
     width: 15%;
+    top: 45%;
     animation: p1cloud3 6s linear infinite;
   }
   .cloud4 {
@@ -85,11 +94,17 @@ strong.blue {
     width: 45%;
     height: 15%;
     top: 50%;
-    padding: 10% 5% 18% 10%;
+    padding: 10% 8% 18% 10%;
     background: url('../img/dialog-bottom.png');
+    p {
+      text-align: center;
+    }
   }
-  .text-go-in {
+  .text-go-in-0 {
     animation: p1textGoIn 1s ease-out forwards;
+  }
+  .text-go-in-1 {
+    animation: p1textGoIn2 1s ease-out forwards;
   }
   .text-go-large {
     animation: p1strongGoLarge 1s ease-out forwards;
@@ -145,14 +160,315 @@ strong.blue {
     background: url('../img/device.png');
   }
   .text {
-    background: url('../img/dialog-blank.png');
-    background-size: 100% 100%;
-    padding: 35px 15px 40px 15px;
+    // background: url('../img/dialog-blank.png');
+    // background-size: 100% 100%;
+    padding: 30px 20px;
+    min-height: 80px;
     position: absolute;
-    left: 10px;
-    top: 50%;
+    left: 40px;
+    top: 65%;
     font-size: 1.1rem;
     line-height: 1.5rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+    p {
+      text-align: center;
+    }
   }
 
+}
+
+#page3 {
+  background: url('../img/bg5.png');
+  .title {
+    width: 90%;
+    height: 10%;
+    position: absolute;
+    top: 5%;
+    left: 5.5%;
+    background: url('../img/title.png');
+    background-size: 100% 100%;
+  }
+  .blackboard {
+    width: 85%;
+    height: 35%;
+    top: 17%;
+    left: 3.5%;
+    position: absolute;
+    padding: 2% 4%;
+    background: url('../img/blackboard.png');
+    background-size: 100% 100%;
+    p {
+      color: #fff;
+      font-size: 1.1rem;
+      line-height: 1.4rem;
+      display: none;
+    }
+  }
+  .female {
+    width: 65%;
+    height: 45%;
+    left: 3%;
+    bottom: 2%;
+    position: absolute;
+    background: url('../img/female3.png');
+    background-size: 100% 100%;
+  }
+}
+
+#page4 {
+  background: url('../img/bg4.png');
+  .loudspeaker {
+    width: 20%;
+    background: url('../img/loudspeaker.png');
+    background-size: 100% 100%;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    animation: loudspeaker 2s .4s infinite both;
+  }
+  .text-to-call {
+    width: 75%;
+    height: 10%;
+    position: absolute;
+    right: 1%;
+    top: 2%;
+    background: url('../img/p4.png');
+    background-size: 100% 100%;
+  }
+  .telephone {
+    .top, .bottom {
+      background-size: 100% 100% !important;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 25%;
+    }
+    .top {
+      background: url('../img/phone2.png');
+      top: 32.5%;
+      animation: teletop 1.5s .4s ease infinite;
+    }
+    .bottom {
+      background: url('../img/phone1.png');
+      top: 36%;
+    }
+  }
+  .phone {
+    width: 50%;
+    height: 11%;
+    padding: 10px;
+    position: absolute;
+    top: 17%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3);
+    &::before {
+      content: ' ';
+      width:0; 
+      height:0; 
+      border-left:30px solid transparent;
+      border-right:30px solid transparent;
+      border-top:30px solid #fff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 99%;
+      margin: 0 auto;
+    }
+    .phone-num {
+      background: url('../img/12331.png');
+      background-size: 100% 100%;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .board {
+    background: url('../img/board.png');
+    background-size: 100% 100%;
+    width: 100%;
+    height: 58%;
+    position: absolute;
+    bottom: -5%;
+    left: 5%;
+    box-sizing: border-box;
+    padding: 10% 15% 5% 5%;
+    p {
+      text-align: center;
+      color: #fff;
+      font-size: 1.1rem;
+      line-height: 1.5rem;
+      &:first-child {
+        font-size: 1.45rem;
+        line-height: 2rem;
+      }
+    }
+    .p-go-large {
+      animation: p4goLarge 1s .4s ease-out forwards;
+    }
+  }
+}
+
+#page5 {
+  background: url('../img/bg3.png');
+  .cloud, .moon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: 100% 100% !important;
+    top: 0;
+    left: 0;
+  }
+  .text-parent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    .text {
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      vertical-align: top;
+      position: absolute;
+    }
+  }
+  .cloud1 {
+    background: url('../img/cloud1.png');
+    z-index: 3;
+  }
+  .cloud2 {
+    background: url('../img/cloud2.png');
+    z-index: 2;
+  }
+  .cloud3 {
+    background: url('../img/cloud3.png');
+    z-index: 1;
+  }
+  .moon {
+    background: url('../img/moon.png');
+    right: 10%;
+    z-index: 4;
+    animation: moon 30s linear forwards;
+  }
+  
+  .title {
+    font-size: 1.7rem;
+    width: 100%;
+    text-align: center;
+    vertical-align: top;
+    position: absolute;
+    top: 5%;
+  }
+  .seal {
+    width: 30%;
+    height: 30%;
+    background: url('../img/seal.png');
+    background-size: 100% 100%;
+    z-index: 10;
+    opacity: 0;
+    position: absolute;
+    right: 5%;
+    top: 20%;
+    // animation: seal 0.5s 0.3s ease-in forwards;
+  }
+
+
+}
+
+#page6 {
+  background: url('../img/bg6.png');
+  .birds {
+    width: 80%;
+    height: 40%;
+    position: absolute;
+    animation: birds 8s linear infinite;
+    background: url('../img/birds.png');
+    background-size: 50% 50%;
+  }
+  .police {
+    background: url('../img/police.png');
+    background-size: 100% 100%;
+    width: 50%;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .label {
+    background: url('../img/label1.png');
+    background-size: 100% 100%;
+    width: 75%;
+    height: 15%;
+    padding: 10% 10%;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    .text {
+      width: 100%;
+      height: 80%;
+      text-align: center;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+  }
+}
+
+.down-bg {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background: url('../img/downbg.png');
+  background-size: 100% 100%;
+  .down {
+    background: url('../img/down.png');
+    background-size: 100% 100%;
+    width: 20%;
+    position: absolute;
+    right: 10%;
+    animation: goDown 1.5s ease-out infinite;
+  }
+}
+
+.music {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  border-radius: 50%;
+  &.on {
+    border: 2px solid #eb4f38;
+    .switch {
+      background: url('../img/on.png');
+      animation: play 3s linear infinite;
+    }
+  }
+  &.off {
+    border: 2px solid #a9b7b7;
+    .switch {
+      background: url('../img/off.png');
+    }
+  }
+  
+  .switch {
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100% !important;
+  }
+  
+  
 }

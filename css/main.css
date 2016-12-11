@@ -1,1 +1,478 @@
-*{padding:0;margin:0}html,body{width:100%;height:100%;font-size:3vh}strong.blue{color:#707cf8}#light{position:absolute;margin-top:25%}.container{width:100%;height:100%}.container .page{width:100%;height:100%;position:relative;background-size:100% 100% !important}#page1{background:url("../img/bg1.png")}#page1 .clouds{position:absolute;background-size:100% 100% !important}#page1 .cloud1{background:url("../img/p1cloud1.png");width:35%;animation:p1cloud1 8s ease-out infinite alternate}#page1 .cloud2{background:url("../img/p1cloud2.png");width:10%;animation:p1cloud2 10s linear infinite alternate}#page1 .cloud3{background:url("../img/p1cloud3.png");width:15%;animation:p1cloud3 6s linear infinite}#page1 .cloud4{background:url("../img/p1cloud2.png");opacity:0.6;width:10%;top:5%;right:5%}#page1 .female{background:url("../img/female.png");background-size:100% 100%;height:45%;position:absolute;bottom:2%}#page1 .female-go-in{animation:p1femaleGoIn 1s ease-out forwards}#page1 .text{position:absolute;background-size:100% 100% !important;box-sizing:content-box;line-height:1.5rem}#page1 .text1{width:60%;height:20%;bottom:50%;padding:3% 5% 10% 10%;background:url("../img/dialog-top.png")}#page1 .text2{width:45%;height:15%;top:50%;padding:10% 5% 18% 10%;background:url("../img/dialog-bottom.png")}#page1 .text-go-in{animation:p1textGoIn 1s ease-out forwards}#page1 .text-go-large{animation:p1strongGoLarge 1s ease-out forwards}#page2{background:url("../img/bg2.png")}#page2 .cloud{background:url("../img/cloud.png");background-size:100% 100%;width:100%;height:25%}#page2 .female{background:url("../img/female2.png");background-size:100% 100%;height:45%;position:absolute;bottom:2%;right:15%}#page2 .icon{width:16%;border-radius:50%;position:absolute;background-size:contain !important;opacity:0}#page2 .icon1{top:35%;left:5%;background:url("../img/food.png")}#page2 .icon2{top:28%;left:23%;background:url("../img/medicine.png")}#page2 .icon3{top:25%;left:42%;background:url("../img/health.png")}#page2 .icon4{top:28%;right:23%;background:url("../img/makeup.png")}#page2 .icon5{top:35%;right:5%;background:url("../img/device.png")}#page2 .text{background:url("../img/dialog-blank.png");background-size:100% 100%;padding:35px 15px 40px 15px;position:absolute;left:10px;top:50%;font-size:1.1rem;line-height:1.5rem}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 2.5vh;
+  color: #434343;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  font-family: 'minijianshaoer793432a6a1618a';
+}
+
+strong.blue {
+  color: #707cf8;
+}
+
+#light {
+  position: absolute;
+  margin-top: 25%;
+}
+
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+.container .page {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: 100% 100% !important;
+  overflow: hidden;
+}
+
+#page1 {
+  background: url("../img/bg1.png");
+}
+#page1 .clouds {
+  position: absolute;
+  background-size: 100% 100% !important;
+}
+#page1 .cloud1 {
+  background: url("../img/p1cloud1.png");
+  width: 35%;
+  -webkit-animation: p1cloud1 8s ease-out infinite alternate;
+          animation: p1cloud1 8s ease-out infinite alternate;
+}
+#page1 .cloud2 {
+  background: url("../img/p1cloud2.png");
+  width: 10%;
+  -webkit-animation: p1cloud2 10s linear infinite alternate;
+          animation: p1cloud2 10s linear infinite alternate;
+}
+#page1 .cloud3 {
+  background: url("../img/p1cloud3.png");
+  width: 15%;
+  top: 45%;
+  -webkit-animation: p1cloud3 6s linear infinite;
+          animation: p1cloud3 6s linear infinite;
+}
+#page1 .cloud4 {
+  background: url("../img/p1cloud2.png");
+  opacity: 0.6;
+  width: 10%;
+  top: 5%;
+  right: 5%;
+}
+#page1 .female {
+  background: url("../img/female.png");
+  background-size: 100% 100%;
+  height: 45%;
+  position: absolute;
+  bottom: 2%;
+}
+#page1 .female-go-in {
+  -webkit-animation: p1femaleGoIn 1s ease-out forwards;
+          animation: p1femaleGoIn 1s ease-out forwards;
+}
+#page1 .text {
+  position: absolute;
+  background-size: 100% 100% !important;
+  box-sizing: content-box;
+  line-height: 1.5rem;
+}
+#page1 .text1 {
+  width: 60%;
+  height: 20%;
+  bottom: 50%;
+  padding: 3% 5% 10% 10%;
+  background: url("../img/dialog-top.png");
+}
+#page1 .text2 {
+  width: 45%;
+  height: 15%;
+  top: 50%;
+  padding: 10% 8% 18% 10%;
+  background: url("../img/dialog-bottom.png");
+}
+#page1 .text2 p {
+  text-align: center;
+}
+#page1 .text-go-in-0 {
+  -webkit-animation: p1textGoIn 1s ease-out forwards;
+          animation: p1textGoIn 1s ease-out forwards;
+}
+#page1 .text-go-in-1 {
+  -webkit-animation: p1textGoIn2 1s ease-out forwards;
+          animation: p1textGoIn2 1s ease-out forwards;
+}
+#page1 .text-go-large {
+  -webkit-animation: p1strongGoLarge 1s ease-out forwards;
+          animation: p1strongGoLarge 1s ease-out forwards;
+}
+
+#page2 {
+  background: url("../img/bg2.png");
+}
+#page2 .cloud {
+  background: url("../img/cloud.png");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 25%;
+}
+#page2 .female {
+  background: url("../img/female2.png");
+  background-size: 100% 100%;
+  height: 45%;
+  position: absolute;
+  bottom: 2%;
+  right: 15%;
+}
+#page2 .icon {
+  width: 16%;
+  border-radius: 50%;
+  position: absolute;
+  background-size: contain !important;
+  opacity: 0;
+}
+#page2 .icon1 {
+  top: 35%;
+  left: 5%;
+  background: url("../img/food.png");
+}
+#page2 .icon2 {
+  top: 28%;
+  left: 23%;
+  background: url("../img/medicine.png");
+}
+#page2 .icon3 {
+  top: 25%;
+  left: 42%;
+  background: url("../img/health.png");
+}
+#page2 .icon4 {
+  top: 28%;
+  right: 23%;
+  background: url("../img/makeup.png");
+}
+#page2 .icon5 {
+  top: 35%;
+  right: 5%;
+  background: url("../img/device.png");
+}
+#page2 .text {
+  padding: 30px 20px;
+  min-height: 80px;
+  position: absolute;
+  left: 40px;
+  top: 65%;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+}
+#page2 .text p {
+  text-align: center;
+}
+
+#page3 {
+  background: url("../img/bg5.png");
+}
+#page3 .title {
+  width: 90%;
+  height: 10%;
+  position: absolute;
+  top: 5%;
+  left: 5.5%;
+  background: url("../img/title.png");
+  background-size: 100% 100%;
+}
+#page3 .blackboard {
+  width: 85%;
+  height: 35%;
+  top: 17%;
+  left: 3.5%;
+  position: absolute;
+  padding: 2% 4%;
+  background: url("../img/blackboard.png");
+  background-size: 100% 100%;
+}
+#page3 .blackboard p {
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  display: none;
+}
+#page3 .female {
+  width: 65%;
+  height: 45%;
+  left: 3%;
+  bottom: 2%;
+  position: absolute;
+  background: url("../img/female3.png");
+  background-size: 100% 100%;
+}
+
+#page4 {
+  background: url("../img/bg4.png");
+}
+#page4 .loudspeaker {
+  width: 20%;
+  background: url("../img/loudspeaker.png");
+  background-size: 100% 100%;
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  -webkit-animation: loudspeaker 2s .4s infinite both;
+          animation: loudspeaker 2s .4s infinite both;
+}
+#page4 .text-to-call {
+  width: 75%;
+  height: 10%;
+  position: absolute;
+  right: 1%;
+  top: 2%;
+  background: url("../img/p4.png");
+  background-size: 100% 100%;
+}
+#page4 .telephone .top, #page4 .telephone .bottom {
+  background-size: 100% 100% !important;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 25%;
+}
+#page4 .telephone .top {
+  background: url("../img/phone2.png");
+  top: 32.5%;
+  -webkit-animation: teletop 1.5s .4s ease infinite;
+          animation: teletop 1.5s .4s ease infinite;
+}
+#page4 .telephone .bottom {
+  background: url("../img/phone1.png");
+  top: 36%;
+}
+#page4 .phone {
+  width: 50%;
+  height: 11%;
+  padding: 10px;
+  position: absolute;
+  top: 17%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+}
+#page4 .phone::before {
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 99%;
+  margin: 0 auto;
+}
+#page4 .phone .phone-num {
+  background: url("../img/12331.png");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+}
+#page4 .board {
+  background: url("../img/board.png");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 58%;
+  position: absolute;
+  bottom: -5%;
+  left: 5%;
+  box-sizing: border-box;
+  padding: 10% 15% 5% 5%;
+}
+#page4 .board p {
+  text-align: center;
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+#page4 .board p:first-child {
+  font-size: 1.45rem;
+  line-height: 2rem;
+}
+#page4 .board .p-go-large {
+  -webkit-animation: p4goLarge 1s .4s ease-out forwards;
+          animation: p4goLarge 1s .4s ease-out forwards;
+}
+
+#page5 {
+  background: url("../img/bg3.png");
+}
+#page5 .cloud, #page5 .moon {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: 100% 100% !important;
+  top: 0;
+  left: 0;
+}
+#page5 .text-parent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+#page5 .text-parent .text {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+  vertical-align: top;
+  position: absolute;
+}
+#page5 .cloud1 {
+  background: url("../img/cloud1.png");
+  z-index: 3;
+}
+#page5 .cloud2 {
+  background: url("../img/cloud2.png");
+  z-index: 2;
+}
+#page5 .cloud3 {
+  background: url("../img/cloud3.png");
+  z-index: 1;
+}
+#page5 .moon {
+  background: url("../img/moon.png");
+  right: 10%;
+  z-index: 4;
+  -webkit-animation: moon 30s linear forwards;
+          animation: moon 30s linear forwards;
+}
+#page5 .title {
+  font-size: 1.7rem;
+  width: 100%;
+  text-align: center;
+  vertical-align: top;
+  position: absolute;
+  top: 5%;
+}
+#page5 .seal {
+  width: 30%;
+  height: 30%;
+  background: url("../img/seal.png");
+  background-size: 100% 100%;
+  z-index: 10;
+  opacity: 0;
+  position: absolute;
+  right: 5%;
+  top: 20%;
+}
+
+#page6 {
+  background: url("../img/bg6.png");
+}
+#page6 .birds {
+  width: 80%;
+  height: 40%;
+  position: absolute;
+  -webkit-animation: birds 8s linear infinite;
+          animation: birds 8s linear infinite;
+  background: url("../img/birds.png");
+  background-size: 50% 50%;
+}
+#page6 .police {
+  background: url("../img/police.png");
+  background-size: 100% 100%;
+  width: 50%;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+#page6 .label {
+  background: url("../img/label1.png");
+  background-size: 100% 100%;
+  width: 75%;
+  height: 15%;
+  padding: 10% 10%;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+#page6 .label .text {
+  width: 100%;
+  height: 80%;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.down-bg {
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background: url("../img/downbg.png");
+  background-size: 100% 100%;
+}
+.down-bg .down {
+  background: url("../img/down.png");
+  background-size: 100% 100%;
+  width: 20%;
+  position: absolute;
+  right: 10%;
+  -webkit-animation: goDown 1.5s ease-out infinite;
+          animation: goDown 1.5s ease-out infinite;
+}
+
+.music {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  border-radius: 50%;
+}
+.music.on {
+  border: 2px solid #eb4f38;
+}
+.music.on .switch {
+  background: url("../img/on.png");
+  -webkit-animation: play 3s linear infinite;
+          animation: play 3s linear infinite;
+}
+.music.off {
+  border: 2px solid #a9b7b7;
+}
+.music.off .switch {
+  background: url("../img/off.png");
+}
+.music .switch {
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100% !important;
+}

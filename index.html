@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+  <link href='http://cdn.webfont.youziku.com/webfonts/nomal/90506/19466/584d567ff629d816506f813c.css' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="css/ref.css">
   <link rel="stylesheet" href="css/animate.min.css">
   <link rel="stylesheet" href="css/animation.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/ref.css">
+  
 </head>
 <body>
-  <!-- <div id="loading">
+  <div id="loading">
     <div id="loading-center">
       <div id="loading-center-absolute">
         <div class="object" id="object_one"></div>
@@ -19,7 +21,7 @@
         <div class="object" id="object_five" style="left:80px;"></div>
       </div>
     </div>
-  </div> -->
+  </div>
   <div class="container">
     <div class="swiper-wrapper">
       <div class="swiper-slide page" id="page1">
@@ -32,7 +34,8 @@
           大家好!我是上海市<strong class="blue">食品安全投诉举报受理中心</strong>的工作人员
         </div>
         <div class="text text2">
-          我们的热线电话是<strong class="blue">12331</strong>
+          <p>我们的热线电话是</p>
+          <p><strong class="blue">12331</strong></p>
         </div>
       </div>
       <div class="swiper-slide page" id="page2">
@@ -43,14 +46,62 @@
         <div class="icon icon4"></div>
         <div class="icon icon5"></div>
         <div class="female"></div>
-        <div class="text">12331统一受理<strong class="blue">四品一械</strong></div>
+        <div class="text">
+          <p>12331统一受理</p>
+          <p><strong class="blue">四品一械</strong></div></p>
       </div>
       <div class="swiper-slide page" id="page3">
-        <canvas id="light"></canvas>
+        <div class="female"></div>
+        <div class="title"></div>
+        <div class="blackboard">
+          <p>1.买到过期食品？</p>
+          <p>2.饭店吃了不舒服？</p>
+          <p>3.看不懂什么是保健食品？</p>
+          <p>4.看不懂化妆品外文标识？</p>
+          <p>5.看不懂药品OTC标识？</p>
+          <p>6.隐形眼镜也算医疗器械吗？</p>
+        </div>
       </div>
-      <div class="swiper-slide page" id="page4">slider4</div>
-      <div class="swiper-slide page" id="page5">slider5</div>
+      <div class="swiper-slide page" id="page4">
+        <div class="loudspeaker"></div>
+        <div class="text-to-call"></div>
+        <div class="telephone">
+          <div class="top"></div>
+          <div class="bottom"></div>
+        </div>
+        <div class="phone">
+          <div class="phone-num"></div>
+        </div>
+        <div class="board">
+          <p>千万记得留好相关购买凭证！</p>
+          <p>为了更好的为您服务，我们需要您提供产品名称、店家信息等。</p>
+        </div>
+      </div>
+      <div class="swiper-slide page" id="page5">
+        <div class="title">四品一械</div>
+        <canvas id="light"></canvas>
+        <div class="text-parent"></div>
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+        <div class="moon"></div>
+        <div class="seal"></div>
+      </div>
+      <div class="swiper-slide page" id="page6">
+        <div class="birds"></div>
+        <div class="police"></div>
+        <div class="label">
+          <div class="text"></div>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="music on">
+    <div class="switch">
+    </div>
+    <audio id="musicfx" loop="loop" autoplay="autoplay">
+      <source src="src/music.mp3" type="audio/mpeg">
+    </audio>
   </div>
 </body>
 </html>
